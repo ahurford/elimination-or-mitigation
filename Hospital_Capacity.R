@@ -88,8 +88,8 @@ ghb = ggplot()+
 gca=ggplot()+
   geom_ribbon(data=output, aes(x=time, ymax=I*max(incidence)/max(I), ymin=0), fill = "grey50", alpha=0.3)+
   geom_line(data=output, aes(x=time, y=incidence), color = "dodgerblue")+
-  geom_ribbon(data = measures, aes(x=times,ymin = -20, ymax = 20*strict), fill = "red")+
-  geom_ribbon(data = measures, aes(x=times,ymin = -20, ymax = 20*mild), fill = "green")+
+  geom_ribbon(data = measures, aes(x=times,ymin = -10, ymax = 10*strict), fill = "red")+
+  geom_ribbon(data = measures, aes(x=times,ymin = -10, ymax = 10*mild), fill = "green")+
   ylab("new cases")+
   scale_x_continuous(breaks=seq(min(output$time),max(output$time),3))+
   theme(axis.text.x = element_text(angle = 90))+
